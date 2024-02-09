@@ -6,7 +6,8 @@ title: 'Viral demand and post-promotion behavior in platforms with network effec
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - admin
-  - [Matthew Gentry](https://www.matthewgentry.net/)
+  - 'Matthew Gentry'
+#[Matthew Gentry](https://www.matthewgentry.net/)
 
 # Author notes (optional)
 author_notes: ''
