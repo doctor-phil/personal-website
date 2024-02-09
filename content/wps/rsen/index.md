@@ -5,13 +5,11 @@ title: 'Resource sharing on endogenous networks'
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
-  - admin
-  - Luke Boosey
 
 # Author notes (optional)
 author_notes: ''
 
-date: '2021-12-01'
+date: ''
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
@@ -28,7 +26,7 @@ publication: 'Working paper'
 publication_short: ''
 
 abstract:
-  <b>Abstract:<\b> We examine behavior in a voluntary resource sharing game that incorporates endogenous network formation; an incentive problem that is increasingly common in contemporary digital economies. By varying the information structure in a controlled laboratory experiment, we examine the underlying mechanisms of reciprocity that generate emergent patterns in linking and contribution decisions. Specifically, we vary whether players are given information about which other players in their group are sharing with them. Reduced-form estimates find significant effects of this information treatment on a number of key outcomes such as efficiency and balanced decentralization. To further understand the driving causes of these observed changes in behavior, we develop and estimate a discrete-choice framework, using computationally efficient panel methods to identify the structure of social preferences in this setting. We find that subjects react to this new information by focusing reciprocity, which helps players coordinate to reach mutually beneficial outcomes. We also find that direct and indirect reciprocity are not perfect substitutes, and this interaction further helps players support efficient outcomes.
+  <b>Abstract:</b> We examine behavior in a voluntary resource sharing game that incorporates endogenous network formation; an incentive problem that is increasingly common in contemporary digital economies. By varying the information structure in a controlled laboratory experiment, we examine the underlying mechanisms of reciprocity that generate emergent patterns in linking and contribution decisions. Specifically, we vary whether players are given information about which other players in their group are sharing with them. Reduced-form estimates find significant effects of this information treatment on a number of key outcomes such as efficiency and balanced decentralization. To further understand the driving causes of these observed changes in behavior, we develop and estimate a discrete-choice framework, using computationally efficient panel methods to identify the structure of social preferences in this setting. We find that subjects react to this new information by focusing reciprocity, which helps players coordinate to reach mutually beneficial outcomes. We also find that direct and indirect reciprocity are not perfect substitutes, and this interaction further helps players support efficient outcomes.
 
 # Summary. An optional shortened abstract.
 summary: ''
