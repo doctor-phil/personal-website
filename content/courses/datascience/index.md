@@ -78,7 +78,6 @@ slides: ""
 **Student feedback:**
 <details>
   <ul>
-    <li><a href="../courses/datascience/ECON323f22_eval.pdf">Full course evaluations (PDF)</a></li>
     <li><b>Selected student comments:</b></li>
     <ul>
       <li>This course covers a ton of advanced topics without any prereqs, which is a great idea. It exposes students to subjects with really interesting applications (my favorite was the graph/network content) that they wouldn't otherwise see until the end of their degree, if ever.</li>
@@ -93,8 +92,6 @@ slides: ""
 </details>
 <details>
   <ul>
-    <li><a href="../courses/datascience/2022W2ECON323003.pdf">Full course evaluations (section 003) (PDF)</a></li>
-    <li><a href="../courses/datascience/2022W2ECON323004.pdf">Full course evaluations (section 004) (PDF)</a></li>
     <li><b>Selected student comments:</b></li>
     <ul>
       <li>Dr. Solimine is really brilliant and accommodating. He definitely knows what he is teaching, and truly cares about his students. One of the best instructors I have ever met. </li>

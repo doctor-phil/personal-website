@@ -32,7 +32,6 @@ abstract:
   <details>
     <b>Summer 2019 (face-to-face)</b>
     <ul>
-      <li><a href="../courses/principles/ECO2023s19_eval.pdf">Full course evaluations (PDF)</a></li>
       <li><b>Selected student comments:</b></li>
       <ul>
         <li>Philip was a very good teacher. He showed passion in the subject matter, teaches in a dynamic way, has good intentions for his students, etc. As a junior, I have not found many professors like this and I don't think I am the only one who feels this way.</li>
