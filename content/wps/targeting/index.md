@@ -71,4 +71,4 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-**Abstract:** Coming soon
+(with [Wei Li](https://economics.ubc.ca/profile/wei-li/))

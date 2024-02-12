@@ -71,4 +71,4 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-**Abstract:** Coming soon
+(with [Angelo Mele](http://meleangelo.github.io/))
