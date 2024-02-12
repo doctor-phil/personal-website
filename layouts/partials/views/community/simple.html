@@ -36,6 +36,6 @@
 <div class="md:flex">
   <div class="p-2">
     <div class="title">{{ $item.Title }}</div>
-    <content:encoded>{{ htmlUnescape ($item.Params.summary | default $item.Summary) | safeHTML | chomp -}}</content:encoded>
+    <content:encoded>{{ htmlUnescape ($item.Params.summary | default $item.Summary) | html | chomp -}}</content:encoded>
   </div>
 </div>
