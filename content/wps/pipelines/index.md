@@ -71,4 +71,4 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-**Abstract:** Coming soon
+(with <a href="https://economics.ubc.ca/profile/paul-schrimpf/">Paul Schrimpf</a> and <a href="https://www.jesseperla.com/">Jesse Perla</a>)
