@@ -27,14 +27,14 @@
     color: #000;
   }
   .title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1rem;
     font-weight: 600;
 }
 </style>
 
 <div class="md:flex">
-  <div class="p-4">
+  <div class="p-2">
     <div class="title">{{ $item.Title }}</div>
     <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
       {{ ($item.Params.summary | default $item.Summary) | htmlUnescape | chomp -}}
