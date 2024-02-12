@@ -1,0 +1,10 @@
+{{ $item := .item }}
+
+  <div class="md:flex">
+    <div class="p-8">
+      <div class="uppercase tracking-wide text-sm text-primary-700 dark:text-primary-200 font-semibold">{{ $item.Title }}</div>
+      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
+        {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | chomp -}}
+      </p>
+    </div>
+  </div>
