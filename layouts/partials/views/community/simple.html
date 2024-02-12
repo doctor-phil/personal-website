@@ -37,7 +37,7 @@
   <div class="p-8">
     <div class="title">{{ $item.Title }}</div>
     <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-      {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | chomp -}}
+      {{ ($item.Params.summary | default $item.Summary) | htmlUnescape | chomp -}}
     </p>
   </div>
 </div>
