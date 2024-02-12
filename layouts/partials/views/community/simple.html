@@ -37,7 +37,9 @@
   <div class="p-2">
     <div class="title">{{ $item.Title }}</div>
     <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-      <content:encoded>{{ ($item.Params.summary | default $item.Summary) | chomp -}}</content:encoded>
+      {% autoescape off %}
+        {{ ($item.Params.summary | default $item.Summary) | chomp - }}
+      {% endautoescape %}
     </p>
   </div>
 </div>
