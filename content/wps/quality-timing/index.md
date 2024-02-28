@@ -71,4 +71,4 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-(with [Matthew Gentry](https://www.matthewgentry.net/))
+(with Patrick Tydir and R. Mark Isaac)
