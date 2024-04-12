@@ -7,16 +7,16 @@ widget: pages
 headless: true
 
 # Order that this section appears on the page.
-weight: 3
+weight: 2
 
-title: Publications
+title: Working papers
 subtitle: ''
 
 content:
   # Filter on criteria
   filters:
     folders:
-      - publications
+      - workingpapers
     tag: ''
     category: ''
     publication_type: ''
@@ -32,6 +32,6 @@ content:
   order: desc
 design:
   # Choose a view for the listings:
-  view: citation
+  view: card
   columns: '2'
 ---

@@ -1,5 +1,5 @@
 ---
-title: 'Resource sharing on endogenous networks'
+title: 'Strategic formation of collaborative networks'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -37,9 +37,9 @@ tags: ['Network econometrics', 'Dynamic networks', 'Experimental markets and net
 featured: true
 
 # Custom links (uncomment lines below)
-links:
- - name: arXiv
-   url: 'https://arxiv.org/abs/2109.14204'
+#links:
+# - name: arXiv
+#   url: 'https://arxiv.org/abs/2109.14204'
 
 url_pdf: 'rsen.pdf'
 url_code: ''
