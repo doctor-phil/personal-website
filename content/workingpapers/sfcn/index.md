@@ -41,7 +41,7 @@ featured: true
 # - name: arXiv
 #   url: 'https://arxiv.org/abs/2109.14204'
 
-url_pdf: 'rsen.pdf'
+url_pdf: 'https://www.psolimine.net/workingpapers/sfcn/sfcn.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
