@@ -1,5 +1,5 @@
 ---
-title: 'Network-moderated distortion in natural resource markets'
+title: 'Investment incentives in natural resource transmission networks'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -26,7 +26,7 @@ publication: 'Working paper'
 publication_short: ''
 
 abstract:
-  (with [Paul Schrimpf](https://economics.ubc.ca/profile/paul-schrimpf/) and [Jesse Perla](https://www.jesseperla.com/))</br></br>
+  (with [Paul Schrimpf](https://economics.ubc.ca/profile/paul-schrimpf/))</br></br>
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -71,4 +71,4 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-(with <a href="https://economics.ubc.ca/profile/paul-schrimpf/">Paul Schrimpf</a> and <a href="https://www.jesseperla.com/">Jesse Perla</a>)
+(with <a href="https://economics.ubc.ca/profile/paul-schrimpf/">Paul Schrimpf</a>)
