@@ -1,5 +1,5 @@
 ---
-title: 'ECON 526 PhD Computational Economics (UBC)'
+title: 'ECON 622 PhD Computational Economics (UBC)'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
