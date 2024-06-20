@@ -43,7 +43,7 @@ links:
  - name: Link to journal article
    url: https://www.sciencedirect.com/science/article/abs/pii/S016726812200436X
  - name: Working paper (PDF)
-   url: '/wps/pqrem/rmsem-draft.pdf'
+   url: '/workingpapers/rmsep/rmsep.pdf'
 
 url_pdf: ''
 url_code: ''
