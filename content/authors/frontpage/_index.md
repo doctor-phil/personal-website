@@ -55,7 +55,7 @@ highlight_name: true
 
 I am a postdoctoral fellow in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia.
 
-I study the relationship between market structure, network structure, and economic outcomes. This involves the development and use of theoretical, statistical, and experimental methods to evaluate the effects of market structure and policy in models of connected economies.
+I study the relationship between market structure, network structure, and economic outcomes. This involves the development and use of theoretical, statistical, and experimental methods to evaluate the effects of market structure and policy in connected economies.
 
 Currently I'm applying this perspective to platform pricing and policy, market design, and the effects of regulation in digital social networks and coupled energy markets. In the past, I've examined markets for collaboration, corruption and influence, experience goods, and reputation systems in digital platforms.
 
