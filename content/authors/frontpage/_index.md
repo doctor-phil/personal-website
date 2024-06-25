@@ -55,4 +55,10 @@ highlight_name: true
 
 I am a postdoctoral fellow in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia.
 
-My research is focused on understanding economic behavior in dynamic social and economic networks. I develop tools to identify the driving forces behind the evolution of social interaction, and apply them to real data to study the subsequent impact of endogenous social structure on economic processes — market transactions, learning, opinion exchange, trading in influence, and collective action — that are set in these complex environments.
+My research is focused on understanding economic behavior in dynamic social and economic networks. I study the relationship between market structure, network structure, and economic outcomes. This involves the development and use of theoretical, statistical, and experimental methods to evaluate the effects of market structure and policy in models of connected economies.
+
+Currently I am working on applications of this perspective to platform pricing and policy, market design, and the effects of regulation in digital social networks and coupled energy markets. In the past, I have examined markets for collaboration, corruption and influence, experience goods, and reputation systems in digital platforms.
+
+Read more about my research [here](/research/), or in my [CV](uploads/Philip_Solimine_CV.pdf).
+
+I am also generally interested in the application of control theoretic, structural econometric, and machine learning methods to economic problems, and the creation of new computational tools for economic research. At UBC, I teach courses in quantitative and computational economics and data science at the undergraduate, masters, and PhD levels. For notes and other information about my courses, see [here](/courses/).
