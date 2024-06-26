@@ -61,4 +61,4 @@ Currently I'm applying this perspective to platform pricing and policy, market d
 
 Read more about my research [here](/research/), or in my [CV](uploads/Philip_Solimine_CV.pdf).
 
-I teach courses in quantitative economics and data science at the undergraduate, masters, and PhD levels. For course notes and other information, see [here](/courses/).
+I teach courses in quantitative economics and data science at the undergraduate, masters, and PhD levels. For course notes and other information, see [here](/teaching/).
