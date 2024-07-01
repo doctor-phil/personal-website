@@ -57,7 +57,7 @@ I am a postdoctoral fellow in the [Vancouver School of Economics](https://econom
 
 I study the relationship between market structure, network structure, and economic outcomes. This involves the development and use of theoretical, statistical, and experimental methods to evaluate the effects of market structure and policy in connected economies.
 
-Currently I'm applying this perspective to platform pricing, market design, and the analysis of regulation policy in digital social networks and coupled energy markets. I've also examined markets for collaboration, corruption and influence, experience goods, and reputation systems in digital platforms.
+Currently I'm applying this perspective to platform pricing, market design, and the analysis of regulation policy in energy markets coupled by natural resource transmission, as well as digital social networks. I've also examined markets for collaboration, corruption and influence, experience goods, and reputation systems in digital market platforms.
 
 Read more about my research [here](/research/), or in my [CV](uploads/Philip_Solimine_CV.pdf).
 
