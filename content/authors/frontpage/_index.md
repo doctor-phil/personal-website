@@ -63,4 +63,4 @@ Read more about my research [here](/research/), or in my [CV](uploads/Philip_Sol
 
 I teach graduate and undergraduate courses in quantitative economics and data science. For course notes and other information, see [here](/teaching/).
 
-I am on the job market in the 2024-2025 academic year. 
+I will be on the job market in the 2024-2025 academic year.
