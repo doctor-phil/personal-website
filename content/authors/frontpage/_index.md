@@ -55,6 +55,8 @@ highlight_name: true
 
 I am a postdoctoral fellow in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia.
 
+I will be on the job market in the 2024-2025 academic year.
+
 I study the relationship between market structure, network structure, and economic outcomes. This involves the development and use of theoretical, statistical, and experimental methods to evaluate the effects of market structure and policy in connected economies.
 
 Currently I'm applying this perspective to platform pricing, market design, and the analysis of regulation policy in energy markets coupled by natural resource transmission, as well as digital social networks. I've also examined markets for collaboration, corruption and influence, experience goods, and reputation systems in digital market platforms.
@@ -62,5 +64,3 @@ Currently I'm applying this perspective to platform pricing, market design, and 
 Read more about my research [here](/research/), or in my [CV](uploads/Philip_Solimine_CV.pdf).
 
 I teach graduate and undergraduate courses in quantitative economics and data science. For course notes and other information, see [here](/teaching/).
-
-I will be on the job market in the 2024-2025 academic year.
