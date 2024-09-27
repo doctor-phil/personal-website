@@ -77,11 +77,8 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-(with <a href="https://economics.ubc.ca/profile/paul-schrimpf/">Paul Schrimpf</a>)
-  <details>
+(with <a href="https://economics.ubc.ca/profile/paul-schrimpf/">Paul Schrimpf</a>)\
     <li><b>Abstract:</b></li>
     <ul>
       This paper investigates regulatory distortion in the incentives for firms to invest in expanding transmission capacity in the United States natural gas pipeline. As a tightly regulated natural monopoly, transmission rates charged by pipeline operators are carefully controlled by federal authorities. These price controls allow for the network to be utilized efficiently, and help reduce the incentive for operators to withhold transmission capacity. The structure of these rate regulations also alters firms' incentives to invest in expanding capacity; however, because profits to the pipeline companies are not necessarily aligned with social value, such distortions are not generically bad. Instead they may be used strategically by the regulator to design an policy that discourages firms from over-capitalizing for higher rates. We leverage a detailed dataset of pipeline regulatory filings to estimate a dynamic model of the firms' investment incentives using double-debiased machine learning. We then construct and estimate a structural measure of the marginal social value of capital, based on a theoretical model of optimal network investment. We find that in the aggregate, the incentives of firms to invest in the pipeline network exceed the social value of capital, suggesting that some costly approval process surrounding pipeline investment is necessary to align the growth of the network with optimal outcomes. We characterize the optimal regulation policy and find that the existing federal regulation policy has been approximately optimal on average. At a spatially disaggregated level, however, we find some systematic deviations from the optimal policy and suggest a welfare-improving spatial reallocation of regulatory stringency.
     </ul>
-  <summary><b>View abstract</b></summary>
-</details>
