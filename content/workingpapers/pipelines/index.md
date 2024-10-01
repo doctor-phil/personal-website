@@ -26,7 +26,7 @@ publication: 'Working paper'
 publication_short: ''
 
 abstract:
-  (with [Paul Schrimpf](https://economics.ubc.ca/profile/paul-schrimpf/))</br></br>\
+  (with [Paul Schrimpf](https://economics.ubc.ca/profile/paul-schrimpf/))</br></br>
    <details>
       <li><b>Abstract:</b></li>
       <ul>
