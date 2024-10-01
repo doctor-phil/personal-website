@@ -37,7 +37,7 @@ abstract:
 # Summary. An optional shortened abstract.
 summary: ''
 
-tags: ['Industrial organization', 'Social and economic networks', 'Environmental economics', 'Applied econometrics', 'Machine learning']
+tags: ['Industrial organization', 'Social and economic networks', 'Dynamic networks', 'Environmental economics', 'Applied econometrics', 'Machine learning']
 
 # Display this page in the Featured widget?
 featured: true
