@@ -9,7 +9,7 @@ authors: ''
 # Author notes (optional)
 author_notes: ''
 
-date: '2024-09-27'
+date: '2024-10-01'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
@@ -37,7 +37,7 @@ abstract:
 # Summary. An optional shortened abstract.
 summary: ''
 
-tags: ['Industrial organization', 'Social and economic networks', 'Environmental economics']
+tags: ['Industrial organization', 'Social and economic networks', 'Environmental economics', 'Applied econometrics', 'Machine learning']
 
 # Display this page in the Featured widget?
 featured: true
@@ -47,7 +47,7 @@ featured: true
 # - name: arXiv
 #   url: 'https://arxiv.org/abs/2109.14204'
 
-url_pdf: ''
+url_pdf: 'https://www.psolimine.net/workingpapers/pipelines/pipelines.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
