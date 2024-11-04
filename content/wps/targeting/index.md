@@ -1,5 +1,5 @@
 ---
-title: 'Coarse targeting to influence opinion dynamics in social networks'
+title: 'Coarse targeting in social networks'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
