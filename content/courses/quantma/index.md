@@ -32,7 +32,7 @@ abstract:
   <br/><br/>
 
   <b>Lecture notes:</b>
-  Lecture notes for this course are available <a href="https://ubcecon.github.io/ECON526/lectures/">here</a>.<br/><br/>
+  Lecture notes for this course are available <a href="https://doctor-phil.github.io/ECON526/lectures/">here</a>.<br/><br/>
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -76,4 +76,4 @@ slides: ""
 Co-instructed with [Jesse Perla](https://www.jesseperla.com/) and [Paul Schrimpf](https://economics.ubc.ca/profile/paul-schrimpf/).<br/><br/>
 **Course description:** This core Master's degree course presents a rigorous overview of the theory and practice of quantitative economics. The course is designed to provide students with the tools necessary to understand and conduct quantitative research in economics and finance using the Python programming language. The course is roughly divided into three parts. The first part covers the theory of linear algebra, probability, and statistics. The second part covers the theory and practice of causal inference, particularly through the lens of directed acyclic graphs. The third section covers advanced topics in econometrics and applied microeconomics, including difference-in-differences, regression discontinuity, and instrumental variables.
 
-**Lecture notes:** Lecture notes for this course are available [here](https://ubcecon.github.io/ECON526/lectures/).
+**Lecture notes:** Lecture notes for this course are available [here](https://doctor-phil.github.io/ECON526/lectures/).

@@ -32,7 +32,7 @@ abstract:
   <br/><br/>
 
   <b>Course materials:</b>
-  Materials for this course are available <a href="https://github.com/ubcecon/ECON622">here</a>.<br/><br/>
+  Materials for this course are available <a href="https://github.com/doctor-phil/ECON622">here</a>.<br/><br/>
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -76,4 +76,4 @@ slides: ""
 Co-instructed with [Jesse Perla](https://www.jesseperla.com/) and [Paul Schrimpf](https://economics.ubc.ca/profile/paul-schrimpf/).<br/><br/>
 **Course description:**   This elective PhD course presents an in-depth review of computational methods in economics. The course provides PhD students with an advanced understanding of the theory underlying computational tools used in economics research, and practical experience implementing these methods. The course is language agnostic and roughly divided into three parts. The first part covers the fundamentals of advanced computer programming using Julia, and covers topics including generic programming, numerical integration, and optimization. The second part covers machine learning in theory and practice, and covers topics like accelerated linear algebra and automatic differentiation in JAX, neural networks, and kernel spaces. The final section covers advanced theoretical concepts used in structural estimation including Bayesian graphical models, Markov Random Fields, advanced Markov-Chain Monte Carlo methods, and an eye on harnessing graph structure to reduce computational complexity.
 
-**Course materials:** Materials for this course are available [here](https://github.com/ubcecon/ECON622/).
+**Course materials:** Materials for this course are available [here](https://github.com/doctor-phil/ECON622/).
