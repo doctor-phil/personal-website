@@ -53,13 +53,13 @@ email: ''
 highlight_name: true
 ---
 
-I am a postdoctoral fellow in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia.
+I am a postdoctoral research and teaching fellow in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia.
 
 I will be on the job market in the 2024-2025 academic year.
 
-I study the relationship between market structure, network structure, and economic outcomes. This involves the development and use of computational, experimental, and econometric methods to evaluate the effects of market structure and policy in connected economies. My research is mostly focused on improving outcomes through strategic targeting with institutional constraints.
+My primary fields are industrial organization, behavioural economics, and market design. To answer questions in these areas, I make use of experiments as well as applied econometrics and microeconomic theory. My work is focused on understanding the relationship between market structure, network structure, and economic outcomes.
 
-Currently I'm applying this perspective to study platform pricing, market design, and regulation policy in energy markets coupled by natural resource transmission, as well as digital social networks. I've also examined markets for collaboration, corruption and influence, experience goods, and reputation systems in digital market platforms.
+Currently I'm applying this perspective to study pricing, market design, and regulation policy in energy markets as well in as online markets and social networks. I've also examined network patterns of collaboration, corruption and influence, experience goods, and reputation systems in digital market platforms. To answer these complex questions, my research also makes advances to the computational tools and methods useful for empirical research in economics.
 
 Read more about my research [here](/research/), or in my [CV](uploads/Philip_Solimine_CV.pdf).
 
