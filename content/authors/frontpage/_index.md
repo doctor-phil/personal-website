@@ -58,8 +58,9 @@ I am a postdoctoral research and teaching fellow in the [Vancouver School of Eco
 I will be on the job market in the 2024-2025 academic year.
 
 My primary fields are industrial organization, behavioural economics, and market design. I make use of experiments as well as applied econometrics and microeconomic theory. 
-Within these areas, my work is focused on understanding the relationship between market structure, network structure, and economic outcomes. 
-To answer these complex questions, my research generally makes contributions to the computational tools and methods used in empirical economics.
+
+My work is focused on understanding the relationship between market structure, network structure, and economic outcomes. 
+To answer these complex questions, my research generally makes contributions to computational tools and methods that help extend the frontier of what we can learn from data.
 
 Currently I'm applying this perspective to study pricing, market design, and regulation policy in energy markets as well in as online markets and social networks. I've also examined network patterns of collaboration, corruption and influence, experience goods, and reputation systems in digital market platforms.
 
