@@ -11,7 +11,7 @@ authors:
 # Author notes (optional)
 author_notes: ''
 
-date: '2025-07-10'
+date: '2025-05-16'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
@@ -39,7 +39,7 @@ featured: false
 
 # Custom links (uncomment lines below)
 links:
- - name: Working paper
+ - name: 'Working paper (PDF)'
    url: 'https://www.psolimine.net/workingpapers/pipelines/pipelines.pdf'
 
 
