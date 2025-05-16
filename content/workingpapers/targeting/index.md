@@ -43,8 +43,8 @@ featured: true
 
 # Custom links (uncomment lines below)
 #links:
- - name: Extended abstract
-   url: 'https://www.psolimine.net/workingpapers/targeting/targeting_extended_abstract.pdf'
+- name: 'Extended abstract'
+  url: 'https://www.psolimine.net/workingpapers/targeting/targeting_extended_abstract.pdf'
 #   url: 'https://arxiv.org/abs/2109.14204'
 
 url_pdf: ''
