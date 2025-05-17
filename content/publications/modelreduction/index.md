@@ -8,13 +8,13 @@ authors:
   - Amirhessam Tahmassebi
   - Behshad Mohebali
   - admin
-  - et al.
+  - et al
   
 
 # Author notes (optional)
 author_notes: ''
 
-date: '2019-05-01'
+date: '2019-05-02'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
