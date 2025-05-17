@@ -9,7 +9,7 @@ authors:
   - Behshad Mohebali
   - Anke Meyer-Baese
   - admin
-  - et al
+  - 'et al.'
   
 
 # Author notes (optional)

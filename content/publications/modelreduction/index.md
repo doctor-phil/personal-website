@@ -8,7 +8,7 @@ authors:
   - Amirhessam Tahmassebi
   - Behshad Mohebali
   - admin
-  - et al
+  - 'et al.'
   
 
 # Author notes (optional)

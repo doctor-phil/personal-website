@@ -6,15 +6,12 @@ title: Philip Solimine
 superuser: true
 
 # Role/position/tagline
-role: Postdoctoral Fellow
+role: PhD Economist, Data Scientist
 
 # Organizations/Affiliations to show in About widget
-organizations:
-  - name: University of British Columbia
-    url: https://www.ubc.ca
 
 # Short bio (displayed in user profile at end of posts)
-bio: Philip Solimine is a Postdoctoral Fellow in Economics and Data Science at the University of British Columbia
+bio: Philip Solimine is a Data Scientist with a PhD in Economics, working on the Marketing Science & Operations team at Chewy.
 
 # Interests to show in About widget
 interests:
@@ -82,8 +79,10 @@ email: ''
 highlight_name: true
 ---
 
-I am a postdoctoral fellow in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia, and an external member of the [Data Science](https://datascience.quantecon.org) team at [QuantEcon](https://quantecon.org).
+I am an economist and data scientist working in marketing science and operations at Chewy. Before joining Chewy, I worked for three years in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia. I earned a dual PhD in Economics and MS in Computational Science from Florida State University in 2022.
 
-My research is focused on understanding economic behavior in dynamic social and economic networks. I develop tools to identify the driving forces behind the evolution of social interaction, and apply them to real data to study the subsequent impact of endogenous social structure on economic processes — market transactions, learning, opinion exchange, trading in influence, and collective action — that are set in these complex environments.
+Most of my research falls into empirical industrial organization, behavioural economics, market design and political economy; my published work focuses on how platform design features, regulatory incentives, and market structure interact to determine the dynamics of social and economic networks, and examines the role of these endogenous network structures and their evolution in shaping economic outcomes.
+
+These are complex systems; in addition to answering empirical questions my work has often developed new computational methods that expand the frontier of what we can learn from data. This includes contributions to causal machine learning, structural estimation, and cybernetics.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/Philip_Solimine_CV.pdf" "newtab" >}}CV{{< /staticref >}}.

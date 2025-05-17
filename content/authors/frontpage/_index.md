@@ -9,9 +9,6 @@ superuser: true
 role: Postdoctoral Fellow
 
 # Organizations/Affiliations to show in About widget
-organizations:
-  - name: University of British Columbia
-    url: https://www.ubc.ca
 
 # Short bio (displayed in user profile at end of posts)
 bio: Philip Solimine is a PhD Economist, working at the intersection of economics, data science, and machine learning at on the Marketing Science & Operations team at Chewy.
@@ -57,7 +54,7 @@ I am an economist and data scientist working in marketing science and operations
 
 Most of my research falls into empirical industrial organization, behavioural economics, market design and political economy; my published work focuses on how platform design features, regulatory incentives, and market structure interact to determine the dynamics of social and economic networks, and examines the role of these endogenous network structures and their evolution in shaping economic outcomes.
 
-These are complex systems; in addition to answering empirical questions my work frequently develops new computational methods that expand the frontier of what we can learn from data. This includes contributions to causal machine learning, structural estimation, and cybernetics.
+These are complex systems; in addition to answering empirical questions my work has often developed new computational methods that expand the frontier of what we can learn from data. This includes contributions to causal machine learning, structural estimation, and cybernetics.
 
 Read more about my research [here](/research/), or in my [CV](uploads/Philip_Solimine_CV.pdf).
 
