@@ -33,7 +33,7 @@ abstract:
 # Summary. An optional shortened abstract.
 summary: ''
 
-tags: ['Networks','Optimal control', 'Input design']
+tags: ['Networks', 'Optimal control', 'Input design', 'Dynamic networks', 'Graph theory', 'Cybernetics']
 
 # Display this page in the Featured widget?
 featured: false

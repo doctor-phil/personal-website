@@ -14,7 +14,7 @@ organizations:
     url: https://www.ubc.ca
 
 # Short bio (displayed in user profile at end of posts)
-bio: Philip Solimine is a Postdoctoral Fellow in Economics and Data Science at the University of British Columbia
+bio: Philip Solimine is a PhD Economist, working at the intersection of economics, data science, and machine learning at on the Marketing Science & Operations team at Chewy.
 
 # Interests to show in About widget
 # Social/Academic Networking
@@ -53,17 +53,12 @@ email: ''
 highlight_name: true
 ---
 
-I am a postdoctoral research and teaching fellow in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia.
+I am an economist and data scientist working in marketing science and operations at Chewy. Before joining Chewy, I worked for three years in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia. I earned a dual PhD in Economics and MS in Computational Science from Florida State University in 2022.
 
-I will be on the job market in the 2024-2025 academic year.
+Most of my research falls into empirical industrial organization, behavioural economics, market design and political economy; my published work focuses on how platform design features, regulatory incentives, and market structure interact to determine the dynamics of social and economic networks, and examines the role of these endogenous network structures and their evolution in shaping economic outcomes.
 
-My primary fields are industrial organization, behavioural economics, and market design. I make use of experiments as well as applied econometrics and microeconomic theory. 
-
-My work is focused on understanding the relationship between market structure, network structure, and economic outcomes. 
-To answer these complex questions, my research generally makes contributions to computational tools and methods that help extend the frontier of what we can learn from data.
-
-Currently I'm applying this perspective to study pricing, market design, and regulation policy in energy markets as well in as online markets and social networks. I've also examined network patterns of collaboration, corruption and influence, experience goods, and reputation systems in digital market platforms.
+These are complex systems; in addition to answering empirical questions my work frequently develops new computational methods that expand the frontier of what we can learn from data. This includes contributions to causal machine learning, structural estimation, and cybernetics.
 
 Read more about my research [here](/research/), or in my [CV](uploads/Philip_Solimine_CV.pdf).
 
-I teach graduate and undergraduate courses in quantitative economics and data science. For course notes and other information, see [here](/teaching/).
+At UBC I taught graduate and undergraduate courses in quantitative economics and data science and developed many open-source course materials. For course notes and other information, see [here](/teaching/).

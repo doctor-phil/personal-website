@@ -33,7 +33,7 @@ abstract: 'In this chapter, the authors conduct a robustness study for the class
 # Summary. An optional shortened abstract.
 summary: ''
 
-tags: ['Market design', 'Experimental markets and networks', 'Replication and robustness']
+tags: ['Market design', 'Experimental markets and platforms', 'Replication and robustness']
 
 # Display this page in the Featured widget?
 featured: false

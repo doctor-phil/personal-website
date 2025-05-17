@@ -31,7 +31,7 @@ abstract: 'This chapter will discuss political corruption in a legislative socia
 # Summary. An optional shortened abstract.
 summary: ''
 
-tags: ['Network corruption','Social learning', 'Optimal control','Data science']
+tags: ['Network corruption','Social learning', 'Optimal control','Data science', 'Networks', 'Cybernetics']
 
 # Display this page in the Featured widget?
 featured: false
