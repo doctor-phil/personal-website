@@ -6,7 +6,7 @@ title: Philip Solimine
 superuser: true
 
 # Role/position/tagline
-role: Postdoctoral Fellow
+role: PhD Economist, Data Scientist
 
 # Organizations/Affiliations to show in About widget
 
