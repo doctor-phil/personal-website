@@ -39,9 +39,11 @@ featured: false
 
 # Custom links (uncomment lines below)
 links:
+ - name: 'Link to conference paper'
+   url: 'https://dl.acm.org/doi/10.1145/3736252.3742482'
+   
  - name: 'Working paper (PDF)'
    url: 'https://www.psolimine.net/workingpapers/pipelines/pipelines.pdf'
-
 
 url_pdf: ''
 url_code: ''
