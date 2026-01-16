@@ -11,7 +11,7 @@ role: PhD Economist, Data Scientist
 # Organizations/Affiliations to show in About widget
 
 # Short bio (displayed in user profile at end of posts)
-bio: Philip Solimine is a Data Scientist with a PhD in Economics, working on the Marketing Science & Operations team at Chewy.
+bio: Philip Solimine is a Data Scientist with a PhD in Economics, working in Marketing ML at Microsoft.
 
 # Interests to show in About widget
 interests:
@@ -79,10 +79,10 @@ email: ''
 highlight_name: true
 ---
 
-I am an economist and data scientist working in marketing science and operations at Chewy. Before joining Chewy, I worked for three years in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia. I earned a dual PhD in Economics and MS in Computational Science from Florida State University in 2022.
+I am an economist and data scientist working in marketing ML at Microsoft. Before joining Microsoft, I worked on the marketing science & operations team at Chewy, and spent three years in the [Vancouver School of Economics](https://economics.ubc.ca/) and the [Centre for Innovative Data in Economic Research](https://economics.ubc.ca/cider/research-activity/) at the University of British Columbia. I earned a dual PhD in Economics and MS in Computational Science from Florida State University in 2022.
 
 Most of my research falls into empirical industrial organization, behavioural economics, market design and political economy; my published work focuses on how platform design features, regulatory incentives, and market structure interact to determine the dynamics of social and economic networks, and examines the role of these endogenous network structures and their evolution in shaping economic outcomes.
 
-These are complex systems; in addition to answering empirical questions my work has often developed new computational methods that expand the frontier of what we can learn from data. This includes contributions to causal machine learning, structural estimation, and cybernetics.
+These are complex systems; in addition to answering empirical questions my work has often developed new computational methods that expand the frontier of what we can learn from data. This includes contributions to causal machine learning, structural estimation, and control systems.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/Philip_Solimine_CV.pdf" "newtab" >}}CV{{< /staticref >}}.
