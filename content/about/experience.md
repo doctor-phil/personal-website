@@ -29,8 +29,8 @@ experience:
     company_url: ''
     company_logo: chewy
     location: Bellevue, WA
-    date_start: '2025-05'
-    date_end: '2025-12'
+    date_start: '2025-05-01'
+    date_end: '2025-12-01'
     description: I was a research and teaching postdoctoral fellow in the [Vancouver School of Economics](https://economics.ubc.ca) and the [Center for Innovative Data in Economics Research (CIDER)](https://economics.ubc.ca/cider/research-activity/) at UBC
 
   - title: Postdoctoral Fellow
@@ -40,8 +40,8 @@ experience:
     company_url: ''
     company_logo: ubc
     location: Vancouver, BC
-    date_start: '2022-08'
-    date_end: '2025-05'
+    date_start: '2022-08-01'
+    date_end: '2025-05-01'
     description: I was a research and teaching postdoctoral fellow in the [Vancouver School of Economics](https://economics.ubc.ca) and the [Center for Innovative Data in Economics Research (CIDER)](https://economics.ubc.ca/cider/research-activity/) at UBC
 
   - title: Charles & Persis Rockwood Doctoral Fellow 
@@ -51,8 +51,8 @@ experience:
     company_url: ''
     company_logo: fsu
     location: Tallahassee, FL
-    date_start: '2017-08'
-    date_end: '2022-07'
+    date_start: '2017-08-01'
+    date_end: '2022-07-01'
     description: I was the first Charles & Persis Rockwood Doctoral Fellow and a Research Fellow of the L. Charles Hilton Center in the Departments of [Economics](https://coss.fsu.edu/economics/) and [Scientific Computing](https://sc.fsu.edu/) at FSU.
 
   - title: Researcher
@@ -62,8 +62,8 @@ experience:
     company_url: ''
     company_logo: fsu
     location: Tallahassee, FL
-    date_start: '2015-01'
-    date_end: '2017-08'
+    date_start: '2015-01-01'
+    date_end: '2017-08-01'
 
 design:
   columns: '2'
