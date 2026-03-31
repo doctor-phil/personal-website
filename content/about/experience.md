@@ -27,7 +27,7 @@ experience:
       Marketing Science & Operations <br />
       Chewy
     company_url: ''
-    company_logo: chewy.png
+    company_logo: chewy
     location: Bellevue, WA
     date_start: '2025-05-01'
     date_end: '2025-12-01'
