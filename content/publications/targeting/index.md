@@ -11,7 +11,7 @@ authors:
 # Author notes (optional)
 author_notes: ''
 
-date: 'forthcoming'
+date: '2026-01-01'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
