@@ -9,7 +9,7 @@ authors:
 # Author notes (optional)
 author_notes: ''
 
-date: '2026-07-01'
+date: '2026-01-01'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
@@ -36,7 +36,7 @@ abstract:
 # Summary. An optional shortened abstract.
 summary: ''
 
-tags: ['Networks', 'Network corruption', 'Computational economics', 'Microeconomic theory', 'Reputation systems and information design']
+tags: ['Networks', 'Network corruption', 'Computational economics', 'Microeconomic theory']
 
 # Display this page in the Featured widget?
 featured: true

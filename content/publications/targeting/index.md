@@ -24,7 +24,7 @@ publishDate: ''
 publication_types: ['1']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Proceedings of the 27th ACM Conference on Economics and Computing (EC)*. p. 85. ACM.
+publication: In *Proceedings of the 27th ACM Conference on Economics and Computing (EC)*. p. 85. ACM
 publication_short: ''
 
 abstract: ''
@@ -32,7 +32,7 @@ abstract: ''
 # Summary. An optional shortened abstract.
 summary: ''
 
-tags: ['Social and economic networks']
+tags: ['Networks', 'Network corruption', 'Computational economics', 'Microeconomic theory']
 
 # Display this page in the Featured widget?
 featured: false
