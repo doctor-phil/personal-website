@@ -6,12 +6,12 @@ title: Philip Solimine
 superuser: true
 
 # Role/position/tagline
-role: PhD Economist, Data Scientist
+role: PhD Economist, Applied Scientist
 
 # Organizations/Affiliations to show in About widget
 
 # Short bio (displayed in user profile at end of posts)
-bio: Philip Solimine is a Data Scientist with a PhD in Economics, working in Marketing ML at Microsoft.
+bio: Philip Solimine is an Applied Scientist with a PhD in Economics, working in Marketing ML at Microsoft.
 
 # Interests to show in About widget
 interests:
