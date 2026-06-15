@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="page container">
+  <div class="section-head">
+    <h2>{{ .Title }}</h2>
+    {{- with .Content }}<div class="section-sub prose">{{ . }}</div>{{ end }}
+  </div>
+
+  {{- $courses := (where site.RegularPages "Section" "courses").ByDate.Reverse -}}
+  {{- with $courses }}
+    <div class="card-grid cols-2">
+      {{- range . }}{{ partial "research-card.html" . }}{{ end }}
+    </div>
+  {{- else }}
+    <p class="muted">Course materials coming soon.</p>
+  {{- end }}
+</div>
+{{ end }}

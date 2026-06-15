@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="page container">
+  <div class="section-head">
+    <h2>{{ .Title }}</h2>
+    {{- with .Content }}<div class="section-sub prose">{{ . }}</div>{{ end }}
+  </div>
+
+  {{- $order := slice
+      (slice "publications" "Publications")
+      (slice "workingpapers" "Working papers")
+      (slice "wps" "Works in progress") -}}
+  {{- range $order }}
+    {{- $sec := index . 0 -}}
+    {{- $label := index . 1 -}}
+    {{- $pages := (where site.RegularPages "Section" $sec).ByDate.Reverse -}}
+    {{- with $pages }}
+      <div class="section-head"><h2>{{ $label }}</h2></div>
+      <div class="card-grid cols-2">
+        {{- range . }}{{ partial "research-card.html" . }}{{ end }}
+      </div>
+    {{- end }}
+  {{- end }}
+</div>
+{{ end }}

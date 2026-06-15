@@ -1,0 +1,22 @@
+{{/* Render social icons from an author page's `social` front matter.
+     Context (.) is the author Page. */}}
+{{- with .Params.social }}
+<div class="social">
+  {{- range . }}
+    {{- $pack := .icon_pack | default "fas" -}}
+    {{- $cls := "" -}}
+    {{- if eq $pack "ai" -}}
+      {{- $cls = printf "ai ai-%s" .icon -}}
+    {{- else -}}
+      {{- $style := dict "fas" "fa-solid" "far" "fa-regular" "fab" "fa-brands" -}}
+      {{- $cls = printf "%s fa-%s" (index $style $pack | default "fa-solid") .icon -}}
+    {{- end -}}
+    {{- $href := .link -}}
+    {{- $external := hasPrefix $href "http" -}}
+    {{- if not $external }}{{ $href = $href | relURL }}{{ end -}}
+    <a href="{{ $href }}" aria-label="{{ .icon }}"{{ if $external }} target="_blank" rel="noopener me"{{ end }}>
+      <i class="{{ $cls }}" aria-hidden="true"></i>
+    </a>
+  {{- end }}
+</div>
+{{- end }}

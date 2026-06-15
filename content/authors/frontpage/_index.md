@@ -56,6 +56,6 @@ Most of my research falls into empirical industrial organization, behavioural ec
 
 These are complex systems; in addition to answering empirical questions my work has often developed new computational methods that expand the frontier of what we can learn from data. This includes contributions to causal machine learning, structural estimation, and control systems.
 
-Read more about my research [here](/research/), or in my [CV](uploads/Philip_Solimine_CV.pdf).
+Read more about my research [here](/research/), or in my [CV](/uploads/Philip_Solimine_CV.pdf).
 
 At UBC I taught graduate and undergraduate courses in quantitative economics and data science and developed many open-source course materials. For course notes and other information, see [here](/teaching/).

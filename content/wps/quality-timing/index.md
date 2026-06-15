@@ -1,5 +1,5 @@
 ---
-title: 'Direct reputation and timing of quality decisions in the lemons market'
+title: 'When life gives you lemons: An investigation into institutions that support reciprocity in markets with moral hazard'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here

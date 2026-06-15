@@ -1,0 +1,14 @@
+{{/* Author bio block. Context (.) is the author Page (e.g. authors/frontpage). */}}
+<div class="bio">
+  <div class="bio-side">
+    {{- $avatar := .Resources.GetMatch "{avatar,avatar.*,*/avatar.*}" -}}
+    {{- with $avatar }}
+      {{- $img := .Fill "300x300 webp q90 Smart" -}}
+      <img class="bio-avatar" src="{{ $img.RelPermalink }}" width="150" height="150" alt="{{ $.Title }}">
+    {{- end }}
+    <h1 class="bio-name">{{ .Title }}</h1>
+    {{- with .Params.role }}<p class="bio-role">{{ . }}</p>{{ end }}
+    {{ partial "social.html" . }}
+  </div>
+  {{- with .Content }}<div class="bio-main prose">{{ . }}</div>{{ end }}
+</div>
