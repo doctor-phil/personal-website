@@ -1,0 +1,73 @@
+{{ define "main" }}
+{{- $p := . -}}
+{{- $secLabels := dict "publications" "publications" "workingpapers" "working papers" "wps" "works in progress" "courses" "courses" "project" "projects" -}}
+{{- $secLabel := index $secLabels $p.Section | default (humanize $p.Section) -}}
+<article class="page container">
+  <div class="prose">
+    <header>
+      <h1>{{ .Title | markdownify }}</h1>
+
+      {{- with .Params.authors }}
+        {{- $names := slice -}}
+        {{- range . }}{{ if . }}
+          {{- if or (eq . "admin") (eq . "frontpage") }}{{ $names = $names | append site.Title }}
+          {{- else }}{{ $names = $names | append (string .) }}{{ end -}}
+        {{ end }}{{ end -}}
+        {{- with $names }}<p class="card-authors">{{ delimit . ", " }}</p>{{ end -}}
+      {{- end }}
+
+      {{- $venue := .Params.publication -}}
+      {{- $year := cond (gt .Date.Year 1) (string .Date.Year) "" -}}
+      {{- if or $venue $year }}
+        <p class="card-meta">
+          {{- with $venue }}<span class="card-venue">{{ . | markdownify }}</span>{{ end -}}
+          {{- if and $venue $year }} &middot; {{ end }}{{ $year -}}
+        </p>
+      {{- end }}
+
+      {{- $links := slice
+          (dict "u" .Params.url_pdf "i" "fa-file-pdf" "t" "PDF")
+          (dict "u" .Params.url_code "i" "fa-code" "t" "Code")
+          (dict "u" .Params.url_slides "i" "fa-person-chalkboard" "t" "Slides")
+          (dict "u" .Params.url_video "i" "fa-video" "t" "Video")
+          (dict "u" .Params.url_dataset "i" "fa-database" "t" "Data")
+          (dict "u" .Params.url_project "i" "fa-diagram-project" "t" "Project")
+          (dict "u" .Params.doi "i" "fa-link" "t" "DOI") -}}
+      {{- $hasLinks := false }}{{ range $links }}{{ if .u }}{{ $hasLinks = true }}{{ end }}{{ end -}}
+      {{- $custom := .Params.links -}}
+      {{- if or $hasLinks $custom }}
+        <div class="btns">
+          {{- range $links }}{{ $lnk := . }}{{ with $lnk.u }}
+            {{- $href := cond (eq $lnk.t "DOI") (printf "https://doi.org/%s" .) . -}}
+            <a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}><i class="fa-solid {{ $lnk.i }}"></i> {{ $lnk.t }}</a>
+          {{- end }}{{ end }}
+          {{- range $custom }}{{ $c := . }}{{ with $c.url }}
+            <a class="btn" href="{{ . }}"{{ if hasPrefix . "http" }} target="_blank" rel="noopener"{{ end }}><i class="fa-solid fa-up-right-from-square"></i> {{ $c.name }}</a>
+          {{- end }}{{ end }}
+        </div>
+      {{- end }}
+    </header>
+
+    {{- $hero := .Resources.GetMatch "featured.*" -}}
+    {{- with $hero }}
+      {{- $i := .Resize "1000x webp q85" -}}
+      <img class="page-hero" src="{{ $i.RelPermalink }}" loading="lazy" alt="{{ $p.Title }}">
+    {{- end }}
+
+    {{- $body := .Content -}}
+    {{- if $body }}
+      <div class="page-body">{{ $body }}</div>
+    {{- else }}{{ with .Params.abstract }}
+      <div class="page-body">{{ . | markdownify }}</div>
+    {{- end }}{{ end }}
+
+    {{- with .Params.tags }}
+      <div class="tags">
+        {{- range . }}<a class="tag" href="{{ (printf "/tag/%s" (. | urlize)) | relLangURL }}">{{ . }}</a>{{ end }}
+      </div>
+    {{- end }}
+
+    <p style="margin-top:2rem"><a href="{{ (printf "/%s/" $p.Section) | relLangURL }}">&larr; All {{ $secLabel }}</a></p>
+  </div>
+</article>
+{{ end }}

@@ -1,10 +1,9 @@
-# Configuration of Hugo
-# Guide: https://wowchemy.com/docs/getting-started/
-# Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+# Hugo configuration
+# Custom lightweight theme (Wowchemy removed). Docs: https://gohugo.io/
 
-title: Philip Solimine # Website name
-baseURL: 'https://www.psolimine.net/' # Website URL
+title: Philip Solimine
+baseURL: 'https://www.psolimine.net/'
+locale: en-us
 
 ############################
 ## LANGUAGE
@@ -12,60 +11,62 @@ baseURL: 'https://www.psolimine.net/' # Website URL
 
 defaultContentLanguage: en
 hasCJKLanguage: false
-defaultContentLanguageInSubdir: false
 removePathAccents: true
 
 ############################
-## MODULES
+## CONTENT / BEHAVIOUR
 ############################
 
-module:
-  imports:
-    - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5
-    - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5
-
-############################
-## ADVANCED
-############################
-
-enableGitInfo: false
-summaryLength: 1000
-paginate: 10
 enableEmoji: true
 enableRobotsTXT: true
-footnotereturnlinkcontents: <sup>^</sup>
-ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
+summaryLength: 60
+enableGitInfo: false
+
+pagination:
+  pagerSize: 12
+
+# Files Hugo should ignore when building.
+ignoreFiles: ['\.ipynb$', '.ipynb_checkpoints$', '\.Rmd$', '\.Rmarkdown$', '_cache$']
+
+# Pretty URLs for talks/taxonomies (preserves legacy paths).
 permalinks:
   event: '/talk/:slug/'
   tags: '/tag/:slug/'
   categories: '/category/:slug/'
   publication_types: '/publication-type/:slug/'
+
 disableAliases: true
-outputs:
-  home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
-  section: [HTML, RSS]
-imaging:
-  resampleFilter: lanczos
-  quality: 75
-  anchor: smart
-timeout: 600000
+
 taxonomies:
   tag: tags
   category: categories
   publication_type: publication_types
-  author: authors
+
+outputs:
+  home: [HTML, RSS]
+  section: [HTML, RSS]
+
+imaging:
+  resampleFilter: lanczos
+  quality: 80
+  anchor: smart
+
 markup:
-  _merge: deep
-related:
-  threshold: 80
-  includeNewer: true
-  toLower: true
-  indices:
-    - name: tags
-      weight: 100
-    - name: categories
-      weight: 70
-security:
-  _merge: deep
+  goldmark:
+    renderer:
+      # Content uses raw HTML (details/summary, iframe, br, li/ul) — must allow it.
+      unsafe: true
+    extensions:
+      typographer:
+        disable: true
+  highlight:
+    style: github
+    noClasses: false
+    lineNos: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
 sitemap:
-  _merge: deep
+  changefreq: monthly
+  priority: 0.5

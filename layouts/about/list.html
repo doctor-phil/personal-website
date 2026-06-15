@@ -1,0 +1,86 @@
+{{ define "main" }}
+{{- $author := site.GetPage (printf "/authors/%s" (site.Params.profile_author | default "frontpage")) -}}
+<div class="page container">
+
+  {{- with $author }}{{ partial "bio.html" . }}{{ end }}
+
+  {{- /* Interests + Education */ -}}
+  {{- $interests := .Params.interests -}}
+  {{- $education := .Params.education -}}
+  {{- if or $interests $education }}
+    <div class="about-grid">
+      {{- with $interests }}
+        <div>
+          <h2 class="about-subhead">Interests</h2>
+          <ul class="interests-list">
+            {{- range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+      {{- end }}
+      {{- with $education }}
+        <div>
+          <h2 class="about-subhead">Education</h2>
+          <ul class="edu-list">
+            {{- range . }}
+              <li>
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <div>
+                  <p class="edu-course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
+                  {{- with .institution }}<p class="edu-inst">{{ . }}</p>{{ end }}
+                  {{- with .note }}<p class="edu-note">{{ . }}</p>{{ end }}
+                </div>
+              </li>
+            {{- end }}
+          </ul>
+        </div>
+      {{- end }}
+    </div>
+  {{- end }}
+
+  {{- /* Experience */ -}}
+  {{- with .Params.experience }}
+    <div class="section-head"><h2>Experience</h2></div>
+    <div class="xp">
+      {{- range . }}
+        {{- $start := "" }}{{ with .date_start }}{{ $start = (time.AsTime .).Format "Jan 2006" }}{{ end -}}
+        {{- $end := "Present" }}{{ with .date_end }}{{ $end = (time.AsTime .).Format "Jan 2006" }}{{ end -}}
+        {{- $logo := "" }}{{ with .company_logo }}{{ $logo = resources.Get (printf "media/icons/brands/%s.svg" .) }}{{ end -}}
+        <div class="xp-item">
+          {{- if $logo }}<img class="xp-logo" src="{{ $logo.RelPermalink }}" alt="" loading="lazy">
+          {{- else }}<div class="xp-logo placeholder"><i class="fa-solid fa-building"></i></div>{{ end }}
+          <div>
+            <p class="xp-title">{{ .title }}</p>
+            <p class="xp-company">{{ .company | safeHTML }}{{ with .location }} &middot; {{ . }}{{ end }}</p>
+            <p class="xp-dates">{{ $start }} &ndash; {{ $end }}</p>
+            {{- with .description }}<div class="xp-desc">{{ . | markdownify }}</div>{{ end }}
+          </div>
+        </div>
+      {{- end }}
+    </div>
+  {{- end }}
+
+  {{- /* Projects */ -}}
+  {{- $projects := (where site.RegularPages "Section" "project").ByDate.Reverse -}}
+  {{- with $projects }}
+    <div class="section-head"><h2>Projects</h2></div>
+    <div class="card-grid cols-2">
+      {{- range . }}{{ partial "research-card.html" . }}{{ end }}
+    </div>
+  {{- end }}
+
+  {{- /* Popular topics */ -}}
+  {{- with site.Taxonomies.tags }}
+    <div class="section-head"><h2>Popular Topics</h2></div>
+    <div class="tag-cloud">
+      {{- range first 25 .ByCount }}
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="muted">({{ .Count }})</span></a>
+      {{- end }}
+    </div>
+  {{- end }}
+
+  {{- /* Contact */ -}}
+  <div class="section-head" id="contact"><h2>Contact</h2></div>
+  <p class="prose">The best way to reach me is via the links below.</p>
+  {{- with $author }}{{ partial "social.html" . }}{{ end }}
+</div>
+{{ end }}

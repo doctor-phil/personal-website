@@ -1,0 +1,78 @@
+{{/* Research/portfolio card. Context (.) is a content Page. */}}
+{{- $p := . -}}
+{{- $labels := dict
+  "publications" "Publication"
+  "workingpapers" "Working paper"
+  "wps" "Work in progress"
+  "courses" "Course"
+  "project" "Project"
+  "event" "Talk" -}}
+{{- $label := index $labels $p.Section | default (humanize $p.Section) -}}
+{{- $wip := eq $p.Section "wps" -}}
+{{- $img := $p.Resources.GetMatch "featured.*" -}}
+<article class="card feed-item{{ if $img }} has-thumb{{ end }}">
+  {{- with $img }}
+    {{- $i := .Fill "300x220 webp q80 Smart" -}}
+    <a class="card-thumb" href="{{ $p.RelPermalink }}"><img src="{{ $i.RelPermalink }}" width="150" height="110" loading="lazy" alt="{{ $p.Title }}"></a>
+  {{- end }}
+  <div class="card-body">
+    <span class="badge{{ if $wip }} wip{{ end }}">{{ $label }}</span>
+    <h3 class="card-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title | markdownify }}</a></h3>
+
+    {{- with $p.Params.authors }}
+      {{- $names := slice -}}
+      {{- range . }}
+        {{- if . -}}
+          {{- if or (eq . "admin") (eq . "frontpage") -}}
+            {{- $names = $names | append site.Title -}}
+          {{- else -}}
+            {{- $names = $names | append (string .) -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- with $names }}<p class="card-authors">{{ delimit . ", " }}</p>{{ end -}}
+    {{- end }}
+
+    {{- $venue := $p.Params.publication -}}
+    {{- $year := cond (gt $p.Date.Year 1) (string $p.Date.Year) "" -}}
+    {{- if or $venue $year }}
+      <p class="card-meta">
+        {{- with $venue }}<span class="card-venue">{{ . | markdownify }}</span>{{ end -}}
+        {{- if and $venue $year }} &middot; {{ end -}}
+        {{- $year -}}
+      </p>
+    {{- end }}
+
+    {{- $summary := "" -}}
+    {{- with $p.Params.summary }}{{ $summary = . }}{{ end -}}
+    {{- with $summary }}<p class="card-summary">{{ . | markdownify }}</p>{{ end }}
+
+    {{- $links := slice
+        (dict "u" $p.Params.url_pdf "i" "fa-file-pdf" "t" "PDF")
+        (dict "u" $p.Params.url_code "i" "fa-code" "t" "Code")
+        (dict "u" $p.Params.url_slides "i" "fa-person-chalkboard" "t" "Slides")
+        (dict "u" $p.Params.url_video "i" "fa-video" "t" "Video")
+        (dict "u" $p.Params.url_dataset "i" "fa-database" "t" "Data") -}}
+    {{- $hasUrl := false -}}
+    {{- range $links }}{{ if .u }}{{ $hasUrl = true }}{{ end }}{{ end -}}
+    {{- $custom := $p.Params.links -}}
+    {{- $doi := $p.Params.doi -}}
+    {{- if or $hasUrl $custom $doi }}
+      <div class="btns">
+        {{- range $links }}{{ $lnk := . }}{{ with $lnk.u }}
+          <a class="btn" href="{{ . }}"{{ if hasPrefix . "http" }} target="_blank" rel="noopener"{{ end }}><i class="fa-solid {{ $lnk.i }}"></i> {{ $lnk.t }}</a>
+        {{- end }}{{ end }}
+        {{- with $doi }}<a class="btn" href="https://doi.org/{{ . }}" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a>{{ end }}
+        {{- range $custom }}{{ $c := . }}{{ with $c.url }}
+          <a class="btn" href="{{ . }}"{{ if hasPrefix . "http" }} target="_blank" rel="noopener"{{ end }}><i class="fa-solid fa-up-right-from-square"></i> {{ $c.name }}</a>
+        {{- end }}{{ end }}
+      </div>
+    {{- end }}
+
+    {{- with $p.Params.tags }}
+      <div class="tags">
+        {{- range first 6 . }}<a class="tag" href="{{ (printf "/tag/%s" (. | urlize)) | relLangURL }}">{{ . }}</a>{{ end }}
+      </div>
+    {{- end }}
+  </div>
+</article>

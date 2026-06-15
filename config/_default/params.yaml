@@ -1,106 +1,30 @@
-# SITE SETUP
-# Guide: https://wowchemy.com/docs/getting-started/
-# Documentation: https://wowchemy.com/docs/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+# Site parameters consumed by the custom theme.
 
-# Appearance
+# Short description used for SEO / social cards.
+description: 'PhD Economist, Applied Scientist'
 
-appearance:
-  theme_day: dark
-#  theme_night: earth
-  font: minimal
-  font_size: L
+# The author profile (folder under content/authors/) to use for the homepage bio.
+profile_author: frontpage
 
-# SEO
+# Sections (content folders) merged into the homepage research feed and the
+# /research aggregator page, in display priority order.
+researchSections:
+  - publications
+  - workingpapers
+  - wps
 
+# Number of feed cards shown before the "endless scroll" reveals more.
+feed_initial_batch: 6
+feed_batch_size: 4
+
+# Social card / SEO.
 marketing:
-  seo:
-    site_type: Person
-    local_business_type: ''
-    org_name: 'Philip Solimine'
-    description: ''
-    twitter: 'pc_solimine'
-  analytics:
-    google_analytics: 'UA-137696306-1'
-    baidu_tongji: ''
-  verification:
-    google: ''
-    baidu: ''
+  twitter: 'pc_solimine'
+  theme_color: '#1565c0'
 
-# Site header
+# Footer.
+copyright: 'Philip Solimine'
 
-header:
-  navbar:
-    enable: true
-    align: l
-    show_logo: true
-    show_language: false
-    show_day_night: false
-    show_search: true
-    highlight_active_link: true
-
-# Site footer
-
-footer:
-  copyright:
-    notice: '© {year} Philip Solimine'
-
-# Localization
-
-locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
-  address_format: en-us
-
-# Site features
-
-features:
-  syntax_highlighter:
-    enable: true
-    extra_languages:
-      - r
-      - latex
-  math:
-    enable: false
-  privacy_pack:
-    enable: false
-  repository:
-    url: 'https://github.com/doctor-phil/doctor-phil'
-    content_dir: content
-    branch: master
-  avatar:
-    gravatar: false
-    shape: circle
-  comment:
-    provider: ''
-    disqus:
-      shortname: ''
-      show_count: true
-    commento:
-      url: ''
-  search:
-    provider: wowchemy
-    algolia:
-      app_id: ''
-      api_key: ''
-      index_name: ''
-      show_logo: false
-  map:
-    provider: ''
-    api_key: ''
-    zoom: 15
-
-# Extensions
-
-extensions:
-  cms:
-    branch: main
-    local_backend: false
-  academicons:
-    enable: true
-
-# Security
-
-security:
-  # Allow frame for embedding speaker notes in slides
-  allow_frame: true
+# Optional analytics (GA4). Leave empty to disable. The old UA-137696306-1
+# property is deprecated (Universal Analytics was shut down) and intentionally removed.
+google_analytics: ''

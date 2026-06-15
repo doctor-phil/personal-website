@@ -1,0 +1,59 @@
+{{- $title := .Title | default site.Title -}}
+{{- $isHome := .IsHome -}}
+{{- $pageTitle := cond $isHome site.Title (printf "%s | %s" $title site.Title) -}}
+{{- $desc := "" -}}
+{{- with .Description }}{{ $desc = . }}{{ else }}{{ with .Summary }}{{ $desc = (. | plainify) }}{{ else }}{{ $desc = site.Params.description }}{{ end }}{{ end -}}
+{{- $desc = $desc | plainify | chomp -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>{{ $pageTitle }}</title>
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ site.Title }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- with site.Params.marketing.theme_color }}<meta name="theme-color" content="{{ . }}">{{ end }}
+
+{{/* Open Graph + Twitter */}}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ cond $isHome site.Title $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+{{- with site.Params.marketing.twitter }}
+<meta name="twitter:site" content="@{{ . }}">
+<meta name="twitter:creator" content="@{{ . }}">
+{{- end }}
+
+{{/* Fonts (match legacy site): Montserrat headings, Roboto body, Roboto Mono code */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap">
+
+{{/* Icon fonts: Font Awesome (social/brands) + Academicons (CV, scholar) */}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" crossorigin="anonymous">
+
+{{/* Theme stylesheet */}}
+{{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+{{/* Favicons generated from assets/media/icon.png */}}
+{{- with resources.Get "media/icon.png" -}}
+  {{- $fav := .Resize "32x32 png" -}}
+  {{- $apple := .Resize "180x180 png" -}}
+  <link rel="icon" type="image/png" href="{{ $fav.RelPermalink }}">
+  <link rel="apple-touch-icon" href="{{ $apple.RelPermalink }}">
+{{- end }}
+
+{{/* RSS */}}
+{{- with .OutputFormats.Get "RSS" -}}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+
+{{/* Optional analytics (GA4) */}}
+{{- with site.Params.google_analytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','{{ . }}');</script>
+{{- end }}

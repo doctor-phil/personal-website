@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="page container">
+  <div class="section-head">
+    <h2>{{ .Title }}</h2>
+    {{- with .Content }}<div class="section-sub prose">{{ . }}</div>{{ end }}
+  </div>
+
+  {{- $pages := .Pages -}}
+  {{- if .Pages }}
+    <div class="card-grid cols-2">
+      {{- range $pages.ByDate.Reverse }}
+        {{ partial "research-card.html" . }}
+      {{- end }}
+    </div>
+  {{- else }}
+    <p class="muted">Nothing here yet.</p>
+  {{- end }}
+</div>
+{{ end }}

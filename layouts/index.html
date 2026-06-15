@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{- /* Bio from the profile author */ -}}
+{{- $author := site.GetPage (printf "/authors/%s" (site.Params.profile_author | default "frontpage")) -}}
+<section class="container">
+  {{- with $author }}{{ partial "bio.html" . }}{{ end }}
+</section>
+
+{{- /* Research, ordered: featured highlights -> publications -> works in progress */ -}}
+{{- $sections := site.Params.researchSections | default (slice "publications" "workingpapers" "wps") -}}
+{{- $research := where site.RegularPages "Section" "in" $sections -}}
+{{- $featured := where (where $research "Params.featured" true) "Section" "!=" "wps" -}}
+{{- $pubs := where (where $research "Section" "publications") "Params.featured" "!=" true -}}
+{{- $wip := where $research "Section" "wps" -}}
+{{- $initial := int (site.Params.feed_initial_batch | default 6) -}}
+{{- $batch := int (site.Params.feed_batch_size | default 4) -}}
+
+<section class="container" id="research">
+  <div class="section-head">
+    <h2>Research</h2>
+    <p class="section-sub">A few highlights below &mdash; browse the <a href="{{ "/research/" | relLangURL }}">full research page</a> for everything.</p>
+  </div>
+
+  {{- with $featured }}
+    <h3 class="feed-group-title">Featured</h3>
+    <div class="card-grid research-feed" data-initial="{{ $initial }}" data-batch="{{ $batch }}">
+      {{- range .ByDate.Reverse }}{{ partial "research-card.html" . }}{{ end }}
+    </div>
+  {{- end }}
+
+  {{- with $pubs }}
+    <h3 class="feed-group-title">Publications</h3>
+    <div class="card-grid research-feed" data-initial="{{ $initial }}" data-batch="{{ $batch }}">
+      {{- range .ByDate.Reverse }}{{ partial "research-card.html" . }}{{ end }}
+    </div>
+  {{- end }}
+
+  {{- with $wip }}
+    <h3 class="feed-group-title">Works in progress</h3>
+    <div class="card-grid research-feed" data-initial="{{ $initial }}" data-batch="{{ $batch }}">
+      {{- range .ByDate.Reverse }}{{ partial "research-card.html" . }}{{ end }}
+    </div>
+  {{- end }}
+</section>
+
+{{- /* Teaching, also browsable from the homepage scroll */ -}}
+{{- $courses := where site.RegularPages "Section" "courses" -}}
+{{- with $courses }}
+<section class="container" id="teaching">
+  <div class="section-head">
+    <h2>Teaching</h2>
+    <p class="section-sub">Courses I have taught &mdash; see the <a href="{{ "/teaching/" | relLangURL }}">teaching page</a> for materials.</p>
+  </div>
+  <div class="card-grid research-feed" data-initial="{{ $initial }}" data-batch="{{ $batch }}">
+    {{- range .ByDate.Reverse }}{{ partial "research-card.html" . }}{{ end }}
+  </div>
+</section>
+{{- end }}
+{{ end }}
