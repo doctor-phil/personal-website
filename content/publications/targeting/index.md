@@ -1,5 +1,5 @@
 ---
-title: 'Coarse targeting in social networks'
+title: 'Targeting persistence: Coarse interventions in social networks'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -32,7 +32,7 @@ abstract: ''
 # Summary. An optional shortened abstract.
 summary: ''
 
-tags: ['Networks', 'Network corruption', 'Computational economics', 'Microeconomic theory']
+tags: ['Networks', 'Computational economics', 'Microeconomic theory']
 
 # Display this page in the Featured widget?
 featured: false
