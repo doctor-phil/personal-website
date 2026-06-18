@@ -26,5 +26,5 @@ marketing:
 copyright: 'Philip Solimine'
 
 # Optional analytics (GA4). Leave empty to disable. The old UA-137696306-1
-# property is deprecated (Universal Analytics was shut down) and intentionally removed.
-google_analytics: ''
+# property was Universal Analytics, which Google shut down (deprecated); replaced with GA4.
+google_analytics: 'G-MP09LF34JY'
