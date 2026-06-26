@@ -50,6 +50,8 @@ is **legitimate interest** in running and protecting the site.
 
 - **Netlify** hosts the site and processes requests (incl. access logs).
 - **Cloudflare** may process requests for performance and bot/abuse mitigation.
+- A **third-party logging provider** may be used to store and analyze access
+  logs for security and operational purposes.
 - **Google** processes analytics data.
 
 Each operates under its own privacy policy.

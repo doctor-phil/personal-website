@@ -12,6 +12,15 @@ import type { Context } from "@netlify/edge-functions";
 // Netlify function logs (Site -> Logs -> Edge Functions). Static assets are
 // skipped to keep the log readable.
 //
+// Durable storage: if the LOG_SINK_URL environment variable is set, each
+// entry is also POSTed (as a one-element JSON array) to that endpoint in the
+// background, so history survives Netlify's short dashboard retention. Set an
+// optional LOG_SINK_TOKEN to send it as a Bearer token. Configure both in the
+// Netlify UI (Site configuration -> Environment variables, scope incl. Edge
+// Functions) — never commit them. The array payload + Bearer header match
+// Axiom's ingest API (https://api.axiom.co/v1/datasets/<name>/ingest); a
+// custom endpoint or other log service works the same way.
+//
 // Note: Netlify's geo data does not include the network ASN. Use the logged
 // IP for an offline ASN/WHOIS lookup (ipinfo.io, bgp.he.net, AbuseIPDB), or
 // read the ASN directly from Cloudflare's Security Events if the site is
@@ -25,6 +34,24 @@ const BOT_UA =
 // downloads are captured.
 const ASSET =
   /\.(css|js|mjs|map|webp|png|jpe?g|gif|svg|ico|woff2?|ttf|eot|xml|json|txt|webmanifest)$/i;
+
+// Forward one entry to the durable sink (if configured), in the background so
+// it never adds latency to the response and never breaks page delivery.
+function forward(context: Context, entry: Record<string, unknown>) {
+  const url = Deno.env.get("LOG_SINK_URL");
+  if (!url) return;
+  const headers: Record<string, string> = { "content-type": "application/json" };
+  const token = Deno.env.get("LOG_SINK_TOKEN");
+  if (token) headers["authorization"] = `Bearer ${token}`;
+  const p = fetch(url, { method: "POST", headers, body: JSON.stringify([entry]) })
+    .then((res) => {
+      if (!res.ok) console.error(`sink HTTP ${res.status}`);
+    })
+    .catch((err) =>
+      console.error("sink error:", err instanceof Error ? err.message : err)
+    );
+  if (typeof context.waitUntil === "function") context.waitUntil(p);
+}
 
 export default async function handler(request: Request, context: Context) {
   try {
@@ -56,6 +83,7 @@ export default async function handler(request: Request, context: Context) {
         bot: ua === "" || BOT_UA.test(ua),
       };
       console.log(`ACCESS ${JSON.stringify(entry)}`);
+      forward(context, entry);
     }
   } catch (err) {
     // Logging must never affect page delivery.
