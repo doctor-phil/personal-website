@@ -31,18 +31,28 @@ export default async function handler(request: Request, context: Context) {
     const url = new URL(request.url);
     if (!ASSET.test(url.pathname)) {
       const ua = request.headers.get("user-agent") ?? "";
+
+      // Behind a Cloudflare proxy, Netlify sees Cloudflare's edge IP as the
+      // client. Prefer Cloudflare's forwarded headers so we keep logging the
+      // real visitor IP/country; otherwise use Netlify's own values.
+      const cfIp = request.headers.get("cf-connecting-ip");
+      const xff = request.headers.get("x-forwarded-for");
+      const behindCf = cfIp !== null;
       const geo = context.geo ?? {};
       const entry = {
         t: new Date().toISOString(),
-        ip: context.ip,
+        src: behindCf ? "cf" : "netlify",
+        ip: cfIp ?? (xff ? xff.split(",")[0].trim() : context.ip),
         method: request.method,
         path: url.pathname + url.search,
         ref: request.headers.get("referer") ?? "",
         ua,
         lang: request.headers.get("accept-language") ?? "",
-        country: geo.country?.code ?? "",
-        city: geo.city ?? "",
-        region: geo.subdivision?.code ?? "",
+        country: behindCf
+          ? (request.headers.get("cf-ipcountry") ?? "")
+          : (geo.country?.code ?? ""),
+        city: behindCf ? "" : (geo.city ?? ""),
+        region: behindCf ? "" : (geo.subdivision?.code ?? ""),
         bot: ua === "" || BOT_UA.test(ua),
       };
       console.log(`ACCESS ${JSON.stringify(entry)}`);
