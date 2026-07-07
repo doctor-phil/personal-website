@@ -8,9 +8,14 @@ import type { Context } from "@netlify/edge-functions";
 // JavaScript, no response changes — so it is invisible to the browser and
 // cannot trigger any browser security warning.
 //
-// One structured JSON line is emitted per page/document request to the
-// Netlify function logs (Site -> Logs -> Edge Functions). Static assets are
-// skipped to keep the log readable.
+// Two kinds of line are emitted:
+//   * kind:"page"  — one per HTML/document (or PDF) request. Full metadata.
+//   * kind:"asset" — a lightweight "render beacon" when a client fetches the
+//     stylesheet or script. Real browsers fetch these; cheap HTTP bots that
+//     just GET the HTML and leave do not. The dashboard uses "did this IP load
+//     a render asset?" to tell an actual browser from a clean-UA bot (which no
+//     amount of UA/geo inspection can do reliably). Images/fonts are ignored to
+//     keep volume down — CSS/JS is enough of a render signal.
 //
 // Durable storage: if the LOG_SINK_URL environment variable is set, each
 // entry is also POSTed (as a one-element JSON array) to that endpoint in the
@@ -29,11 +34,15 @@ import type { Context } from "@netlify/edge-functions";
 const BOT_UA =
   /(bot|crawl|spider|slurp|headless|python-requests|go-http-client|curl|wget|axios|scrapy|httpclient|libwww|java\/|okhttp|phantomjs|puppeteer|playwright|monitor|uptime|preview|fetch)/i;
 
-// Static assets we don't need an access-log line for (the page that embeds
-// them is logged instead). PDFs are intentionally NOT excluded so CV
-// downloads are captured.
-const ASSET =
-  /\.(css|js|mjs|map|webp|png|jpe?g|gif|svg|ico|woff2?|ttf|eot|xml|json|txt|webmanifest)$/i;
+// Render-confirming assets: a real browser fetches the stylesheet/script after
+// the HTML. Logged as a lightweight beacon.
+const RENDER = /\.(css|js|mjs)$/i;
+
+// Other static assets we ignore entirely (the page that embeds them is logged,
+// and they add no signal beyond the CSS/JS beacon). PDFs are intentionally NOT
+// listed here, so CV downloads are still logged as pages.
+const IGNORE =
+  /\.(map|webp|png|jpe?g|gif|svg|ico|woff2?|ttf|eot|xml|json|txt|webmanifest)$/i;
 
 // Forward one entry to the durable sink (if configured), in the background so
 // it never adds latency to the response and never breaks page delivery.
@@ -56,22 +65,38 @@ function forward(context: Context, entry: Record<string, unknown>) {
 export default async function handler(request: Request, context: Context) {
   try {
     const url = new URL(request.url);
-    if (!ASSET.test(url.pathname)) {
-      const ua = request.headers.get("user-agent") ?? "";
+    const path = url.pathname;
 
-      // Behind a Cloudflare proxy, Netlify sees Cloudflare's edge IP as the
-      // client. Prefer Cloudflare's forwarded headers so we keep logging the
-      // real visitor IP/country; otherwise use Netlify's own values.
-      const cfIp = request.headers.get("cf-connecting-ip");
-      const xff = request.headers.get("x-forwarded-for");
-      const behindCf = cfIp !== null;
+    // Behind a Cloudflare proxy, Netlify sees Cloudflare's edge IP as the
+    // client. Prefer Cloudflare's forwarded headers so we keep logging the
+    // real visitor IP/country; otherwise use Netlify's own values.
+    const cfIp = request.headers.get("cf-connecting-ip");
+    const xff = request.headers.get("x-forwarded-for");
+    const behindCf = cfIp !== null;
+    const ip = cfIp ?? (xff ? xff.split(",")[0].trim() : context.ip);
+    const src = behindCf ? "cf" : "netlify";
+
+    if (RENDER.test(path)) {
+      // Lightweight render beacon — proves this IP is a real rendering browser.
+      const beacon = {
+        t: new Date().toISOString(),
+        kind: "asset",
+        src,
+        ip,
+        path,
+      };
+      console.log(`ASSET ${JSON.stringify(beacon)}`);
+      forward(context, beacon);
+    } else if (!IGNORE.test(path)) {
+      const ua = request.headers.get("user-agent") ?? "";
       const geo = context.geo ?? {};
       const entry = {
         t: new Date().toISOString(),
-        src: behindCf ? "cf" : "netlify",
-        ip: cfIp ?? (xff ? xff.split(",")[0].trim() : context.ip),
+        kind: "page",
+        src,
+        ip,
         method: request.method,
-        path: url.pathname + url.search,
+        path: path + url.search,
         ref: request.headers.get("referer") ?? "",
         ua,
         lang: request.headers.get("accept-language") ?? "",
@@ -85,6 +110,7 @@ export default async function handler(request: Request, context: Context) {
       console.log(`ACCESS ${JSON.stringify(entry)}`);
       forward(context, entry);
     }
+    // else: ignored asset (image/font/etc) — no log line.
   } catch (err) {
     // Logging must never affect page delivery.
     console.error("access-log error:", err instanceof Error ? err.message : err);
@@ -94,7 +120,8 @@ export default async function handler(request: Request, context: Context) {
 
 export const config = {
   path: "/*",
-  // Trim the bulk of asset traffic up front; the in-handler ASSET check
-  // catches per-page images (e.g. featured thumbnails) that share a page dir.
-  excludedPath: ["/css/*", "/js/*"],
+  // CSS/JS are intentionally NOT excluded now — they are the render beacon.
+  // Other assets still cost one (cheap) invocation that returns early via the
+  // IGNORE check; our assets live under page dirs (e.g. featured images), so we
+  // filter in-handler rather than by path here.
 };
