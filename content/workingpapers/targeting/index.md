@@ -25,7 +25,7 @@ publication_types: ['3']
 publication: 'Working paper'
 publication_short: ''
 
-abstract:
+abstract: |
   (with [Wei Li](https://economics.ubc.ca/profile/wei-li/))</br>
    <details><summary><b>Show/Hide Abstract</b></summary>
       <ul>
