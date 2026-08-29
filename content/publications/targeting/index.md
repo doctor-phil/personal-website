@@ -1,5 +1,5 @@
 ---
-title: 'Targeting persistence: Coarse interventions in social networks'
+title: 'Targeting persistent disagreement: Coarse interventions in social networks'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -42,8 +42,8 @@ links:
 #  - name: 'Link to conference paper'
 #    url: 'https://dl.acm.org/doi/10.1145/3736252.3742482'
    
-#  - name: 'Working paper (PDF)'
-#    url: 'https://www.psolimine.net/workingpapers/pipelines/pipelines.pdf'
+ - name: 'Working paper (PDF)'
+   url: 'https://www.psolimine.net/workingpapers/targeting/coarse_targeting.pdf'
 
 url_pdf: ''
 url_code: ''
